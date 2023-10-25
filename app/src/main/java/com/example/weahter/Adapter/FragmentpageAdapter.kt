@@ -16,7 +16,6 @@ class FragmentpageAdapter(
     override fun getItemCount(): Int {
         return 2
     }
-
     override fun createFragment(position: Int): Fragment {
       return  if(position==0){
           Today()
@@ -24,5 +23,4 @@ class FragmentpageAdapter(
         else
             Days()
     }
-
 }

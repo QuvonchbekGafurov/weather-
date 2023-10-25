@@ -1,9 +1,6 @@
 package com.example.weahter.remote
 
-import com.example.weahter.data.weatherData
-import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
+import com.example.weahter.model.weatherData
 import retrofit2.http.POST
 import retrofit2.http.Query
 

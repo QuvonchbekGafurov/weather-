@@ -1,4 +1,4 @@
-package com.example.weahter.data
+package com.example.weahter.model
 
 data class Astro(
     val is_moon_up: Int,

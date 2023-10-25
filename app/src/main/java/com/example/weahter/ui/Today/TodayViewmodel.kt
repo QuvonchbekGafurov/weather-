@@ -5,8 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.weahter.data.postdata
-import com.example.weahter.data.weatherData
+import com.example.weahter.model.postdata
+import com.example.weahter.model.weatherData
 import com.example.weahter.repository.Repository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

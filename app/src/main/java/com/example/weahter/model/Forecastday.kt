@@ -1,4 +1,4 @@
-package com.example.weahter.data
+package com.example.weahter.model
 
 data class Forecastday(
     val astro: Astro,

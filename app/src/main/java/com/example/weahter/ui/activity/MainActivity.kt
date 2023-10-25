@@ -3,22 +3,16 @@ package com.example.weahter.ui.activity
 import android.icu.text.SimpleDateFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import androidx.databinding.ObservableMap.OnMapChangedCallback
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.example.weahter.Adapter.FragmentpageAdapter
-import com.example.weahter.R
-import com.example.weahter.data.Current
-import com.example.weahter.data.postdata
-import com.example.weahter.data.weatherData
+import com.example.weahter.model.postdata
+import com.example.weahter.model.weatherData
 import com.example.weahter.databinding.ActivityMainBinding
 import com.example.weahter.ui.Today.TodayViewmodel
 import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.Locale
-import java.util.concurrent.ThreadLocalRandom.current
 
 
 class MainActivity : AppCompatActivity() {
@@ -90,6 +84,7 @@ class MainActivity : AppCompatActivity() {
         val inputFormat = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
         val outputFormat = SimpleDateFormat("d MMMM yyyy", Locale.ENGLISH)
          val parsedDate = inputFormat.parse(date)
-            return outputFormat.format(parsedDate) }
+        return outputFormat.format(parsedDate)
+    }
 
 }

@@ -1,4 +1,4 @@
-package com.example.weahter.data
+package com.example.weahter.model
 
 data class Condition(
     val code: Int,

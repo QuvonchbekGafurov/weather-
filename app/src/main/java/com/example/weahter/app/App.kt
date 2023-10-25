@@ -16,6 +16,4 @@ class App:Application() {
             modules(dataModule)
         }
     }
-
-
 }

@@ -1,6 +1,6 @@
 package com.example.weahter.repository
-import com.example.weahter.data.postdata
-import com.example.weahter.data.weatherData
+import com.example.weahter.model.postdata
+import com.example.weahter.model.weatherData
 import com.example.weahter.remote.ApiInterface
 
 class RepositoryImple(val apiInterface: ApiInterface) : Repository {

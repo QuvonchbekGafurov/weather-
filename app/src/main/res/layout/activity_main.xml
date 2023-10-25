@@ -137,24 +137,26 @@
         android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@color/background"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/background2"
         app:tabIndicatorAnimationMode="elastic"
-        app:tabTextColor="@color/black"
         app:tabIndicatorGravity="stretch"
         app:tabMode="fixed"
-        android:background="@color/background"
+        app:tabTextColor="@color/black"
         tools:ignore="SpeakableTextPresentCheck">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
-            android:text="Today"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:text="Today" />
+
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
-            android:text="10 Days"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:text="10 Days" />
 
     </com.google.android.material.tabs.TabLayout>
 

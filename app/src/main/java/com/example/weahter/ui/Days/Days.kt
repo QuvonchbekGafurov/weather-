@@ -7,18 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.weahter.Adapter.DaysAdapter
-import com.example.weahter.R
-import com.example.weahter.data.Forecast
-import com.example.weahter.data.Forecastday
-import com.example.weahter.data.postdata
-import com.example.weahter.data.weatherData
+import com.example.weahter.model.Forecast
+import com.example.weahter.model.Forecastday
+import com.example.weahter.model.postdata
 import com.example.weahter.databinding.FragmentDaysBinding
-import com.example.weahter.databinding.FragmentTodayBinding
 import com.example.weahter.ui.Today.TodayViewmodel
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import java.util.concurrent.ThreadLocalRandom.current
 
 class Days : Fragment() {
 

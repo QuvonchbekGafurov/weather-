@@ -10,9 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.weahter.R
-import com.example.weahter.data.Forecast
-import com.example.weahter.data.Forecastday
-import com.example.weahter.data.weatherData
+import com.example.weahter.model.Forecast
 
 class DaysAdapter(private val context:Context,private val forecast:Forecast) : RecyclerView.Adapter<DaysAdapter.MyViewHolder>() {
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
