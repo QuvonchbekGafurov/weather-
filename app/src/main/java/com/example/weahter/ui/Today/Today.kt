@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide
 import com.example.weahter.R
 import com.example.weahter.data.Current
 import com.example.weahter.data.Location
@@ -91,8 +92,24 @@ fun set(result: weatherData){
     }
     fun setHourlyforecast(result: weatherData){
         val data=result.forecast.forecastday[0].hour
-        val now=result.location.localtime.substring(11,13).toInt()
-        for (i in 0..10 )
+        var hourlyimage= arrayOf(binding.hourlyimg2,binding.hourlyimg3,binding.hourlyimg4,binding.hourlyimg5,binding.hourlyimg6)
+        var hourlygr= arrayOf(binding.hourlygr2,binding.hourlygr3,binding.hourlygr4,binding.hourlygr5,binding.hourlygr6)
+        hourlygr[0].text="${data[1].temp_c.toInt()}°C"
+        hourlygr[1].text="${data[6].temp_c.toInt()}°C"
+        hourlygr[2].text="${data[12].temp_c.toInt()}°C"
+        hourlygr[3].text="${data[18].temp_c.toInt()}°C"
+        hourlygr[4].text="${data[23].temp_c.toInt()}°C"
+        binding.hourlygr1.text="${result.current.temp_c.toInt()}°C"
+
+
+        Glide.with(this).load("https:${data[1].condition.icon}").centerCrop().into(hourlyimage[0])
+        Glide.with(this).load("https:${data[6].condition.icon}").centerCrop().into(hourlyimage[1])
+         Glide.with(this).load("https:${data[12].condition.icon}").centerCrop().into(hourlyimage[2])
+           Glide.with(this).load("https:${data[18].condition.icon}").centerCrop().into(hourlyimage[3])
+          Glide.with(this).load("https:${data[23].condition.icon}").centerCrop().into(hourlyimage[4])
+           Glide.with(this).load("https:${result.current.condition.icon}").centerCrop().into(binding.hourlyimg1)
+
+
     }
 
     fun dateToText(dateString: String): String {

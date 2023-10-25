@@ -90,6 +90,7 @@ class MainActivity : AppCompatActivity() {
         val inputFormat = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
         val outputFormat = SimpleDateFormat("d MMMM yyyy", Locale.ENGLISH)
          val parsedDate = inputFormat.parse(date)
-            return outputFormat.format(parsedDate) }
+        return outputFormat.format(parsedDate)
+    }
 
 }
