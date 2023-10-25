@@ -6,6 +6,7 @@
     app:startDestination="@id/main">
     <fragment
         android:id="@+id/main"
-        android:name="com.example.weahter.ui.main.Main"
-        android:label="Main" />
+        android:name="com.example.weahter.ui.Today.Today"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_today" />
 </navigation>

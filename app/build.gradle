@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+
 }
 
 android {
@@ -11,7 +12,7 @@ android {
     defaultConfig {
         applicationId "com.example.weahter"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -20,7 +21,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -45,8 +47,8 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:2.7.4"
     implementation "androidx.navigation:navigation-ui-ktx:2.7.4"
 
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
@@ -54,12 +56,30 @@ dependencies {
     var koin_version = "3.2.0-beta-1"
     implementation("io.insert-koin:koin-core:$koin_version")
     testImplementation("io.insert-koin:koin-test:$koin_version")
+    //noinspection GradleDependency
     implementation "io.insert-koin:koin-android:$koin_version"
 
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.8'
 
-    implementation 'androidx.core:core-ktx:1.8.0'
+    //Location
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+    //LineChart
+    implementation 'com.github.blackfizz:eazegraph:1.2.2@aar'
+    implementation 'com.nineoldandroids:library:2.4.0'
+
+    //googlemap
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    // Motionlayout
+    implementation "androidx.constraintlayout:constraintlayout:2.2.0-alpha13"
+
+    implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.10.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

@@ -3,8 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white50">#80FFFFFF</color>
-    <color name="main">#B34A82B2</color>
+    <color name="main">#EBDEFF</color>
     <color name="main1">#2B2B2B</color>
-    <color name="cloud">#9090AC</color>
+    <color name="sunny2back1">#9FDCA8</color>
+    <color name="sunny2back2">#4D8ECA96</color>
+    <color name="background">#F6EDFF</color>
 
 </resources>

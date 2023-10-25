@@ -1,13 +1,11 @@
 package com.example.weahter.di
 
-import androidx.lifecycle.ViewModel
 import com.example.weahter.remote.ApiInterface
 import com.example.weahter.remote.RetrofitBuilder
 import com.example.weahter.repository.Repository
 import com.example.weahter.repository.RepositoryImple
-import com.example.weahter.ui.main.MainViewmodel
+import com.example.weahter.ui.Today.TodayViewmodel
 import org.koin.androidx.viewmodel.dsl.viewModel
-import org.koin.core.parameter.ParametersHolder
 import org.koin.dsl.module
 
 val dataModule = module {
@@ -16,8 +14,8 @@ val dataModule = module {
     factory <Repository> {
         RepositoryImple(apiInterface = get())
     }
-    viewModel<MainViewmodel> {
-        MainViewmodel(repository = get())
+    viewModel<TodayViewmodel> {
+        TodayViewmodel(repository = get())
     }
 }
 
